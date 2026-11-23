@@ -1,0 +1,51 @@
+{
+  "name": "@carlosalmonte04/resource-intensive-queue",
+  "version": "0.0.1",
+  "description": "File-based concurrency queue for Playwright resource-intensive routes",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "default": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "prepublishOnly": "npm test && npm run build"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/carlosalmonte04/resource-intensive-queue.git"
+  },
+  "bugs": {
+    "url": "https://github.com/carlosalmonte04/resource-intensive-queue/issues"
+  },
+  "homepage": "https://github.com/carlosalmonte04/resource-intensive-queue#readme",
+  "keywords": [
+    "playwright",
+    "queue",
+    "concurrency",
+    "resource-intensive"
+  ],
+  "author": "carlosalmonte04",
+  "license": "MIT",
+  "engines": {
+    "node": ">=18"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.1",
+    "typescript": "^5.7.2",
+    "vitest": "^3.0.5"
+  }
+}
