@@ -5,13 +5,13 @@ Limit how many Playwright route handlers run a resource-intensive request at onc
 ## Install
 
 ```bash
-npm install resource-intensive-queue
+npm install -D @carlosalmonte04/resource-intensive-queue
 ```
 
 ## Usage
 
 ```ts
-import riQueue from "resource-intensive-queue";
+import riQueue from "@carlosalmonte04/resource-intensive-queue";
 
 await page.route("**/*", async (route) => {
   const url = route.request().url();
